@@ -35,6 +35,23 @@ This repository contains daily Dynamic Programming (DP) problems solved in Java.
    - Uses only two variables (`prev1` and `prev2`) to track results.
    - Time Complexity: O(n), Space Complexity: O(1).
 
+## Day 3: House Robber Problem
+
+1. **Day3_HouseRobber.java**
+   - Classic DP problem: given money in each house, find the maximum money that can be robbed without robbing two adjacent houses.
+   - Uses an iterative bottom-up approach with **space optimization**.
+   - Transitions:
+     - `cur = max(prev1, prev2 + num[i])`
+     - `prev2 = prev1`, `prev1 = cur`
+   - Time Complexity: O(n), Space Complexity: O(1).
+   - Example:
+     ```
+     Input:  [2, 7, 9, 3, 1]
+     Output: 12
+     Explanation: Rob house 1 (2) + house 3 (9) + house 5 (1) = 12
+     ```
+
+---
 
 ---
 
