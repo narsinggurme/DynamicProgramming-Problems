@@ -67,7 +67,8 @@ This repository contains daily Dynamic Programming (DP) problems solved in Java.
      ```
      Input:  [3, 2, 5, 10, 7]
      Output: 15
-     Explanation: Pick 3 + 10 + 2 OR 2 + 5 + 7 → maximum = 15
+     Explanation: Pick 3 + 5 + 7 → maximum = 15
+
      ```
 
 ---
