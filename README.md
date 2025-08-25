@@ -55,14 +55,21 @@ This repository contains daily Dynamic Programming (DP) problems solved in Java.
 ## Day 4: Maximum Sum of Non-Adjacent Elements
 
 1. **Day4_MaxSumNonAdjacent.java**
-   - Problem: Given an array, find the maximum sum of elements such that no two chosen elements are adjacent.
-   - This is the **generalized version of the House Robber problem**.
-   - Approach:
-     - Use DP with two states:
-       - `include = arr[i] + exclude`
-       - `exclude = max(oldInclude, exclude)`
-     - Update iteratively.
-   - Time Complexity: O(n), Space Complexity: O(1).
+      - Problem: Given an array of integers, find the maximum sum of elements such that no two chosen elements are adjacent.
+   - Similar to the House Robber problem.
+   - Uses **space optimized DP** with two variables:
+     - `include` → max sum including the current element
+     - `exclude` → max sum excluding the current element
+   - Transition:
+     ```
+     newInclude = exclude + arr[i]
+     newExclude = max(include, exclude)
+     include = newInclude
+     exclude = newExclude
+     ```
+   - Final Answer = `max(include, exclude)`
+   - Time Complexity: O(n)
+   - Space Complexity: O(1)
    - Example:
      ```
      Input:  [3, 2, 5, 10, 7]
@@ -70,7 +77,6 @@ This repository contains daily Dynamic Programming (DP) problems solved in Java.
      Explanation: Pick 3 + 5 + 7 → maximum = 15
 
      ```
-
 ---
 ---
 
