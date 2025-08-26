@@ -78,6 +78,26 @@ This repository contains daily Dynamic Programming (DP) problems solved in Java.
 
      ```
 ---
+## Day 5: Min Cost Climbing Stairs
+
+1. **Day5_MinCostClimbingStairs.java**
+   - Problem: Each step has an associated cost. You can climb either **1 or 2 steps** at a time. Find the minimum cost to reach the top.
+   - Uses **space optimized DP**.
+   - Transition:
+     ```java
+     cur = cost[i] + Math.min(prev1, prev2)
+     prev1 = prev2
+     prev2 = cur
+     ```
+   - Final Answer = `Math.min(prev1, prev2)`
+   - Time Complexity: O(n)  
+   - Space Complexity: O(1)  
+   - Example:
+     ```
+     Input:  [10, 15, 20]
+     Output: 15
+     Explanation: Take step 1 (cost=15) → reach top
+     ```
 ---
 
 ### How to run
