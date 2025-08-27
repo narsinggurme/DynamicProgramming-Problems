@@ -99,7 +99,31 @@ This repository contains daily Dynamic Programming (DP) problems solved in Java.
      Explanation: Take step 1 (cost=15) → reach top
      ```
 ---
+# Day 6 – Coin Change Problem (Dynamic Programming)
 
+## 📌 Problem Statement
+Given an array of coin denominations and a target amount, find the **minimum number of coins** required to make that amount.  
+If it is not possible to make the amount, return `-1`.
+
+Additionally, show **which coins** were used in the solution.
+
+---
+
+## 🧩 Approach
+We solve this using **Dynamic Programming (DP)**:
+
+- `dp[i]` → minimum number of coins needed to make amount `i`.
+- `prevCoin[i]` → stores the last coin used to make amount `i`.
+
+### Steps:
+1. Initialize `dp[0] = 0` (base case, 0 coins needed for amount 0).
+2. Fill the `dp` array with a large value (`amount+1` → acts as infinity).
+3. For each coin, update `dp[i]` for all amounts `i >= coin`.
+4. If using this coin gives a better solution (`dp[i-coin] + 1 < dp[i]`), update both `dp[i]` and `prevCoin[i]`.
+5. At the end:
+   - If `dp[amount] > amount`, no solution exists.
+   - Otherwise, backtrack using `prevCoin[]` to reconstruct which coins were chosen.
+---
 ### How to run
 - Open the project in any Java IDE (Eclipse, IntelliJ, etc.) or use terminal.
 - Compile and run the respective `.java` files.
