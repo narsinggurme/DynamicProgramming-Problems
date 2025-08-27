@@ -101,7 +101,7 @@ This repository contains daily Dynamic Programming (DP) problems solved in Java.
 ---
 # Day 6 – Coin Change Problem (Dynamic Programming)
 
-## 📌 Problem Statement
+## Problem Statement
 Given an array of coin denominations and a target amount, find the **minimum number of coins** required to make that amount.  
 If it is not possible to make the amount, return `-1`.
 
@@ -109,7 +109,7 @@ Additionally, show **which coins** were used in the solution.
 
 ---
 
-## 🧩 Approach
+## Approach
 We solve this using **Dynamic Programming (DP)**:
 
 - `dp[i]` → minimum number of coins needed to make amount `i`.
