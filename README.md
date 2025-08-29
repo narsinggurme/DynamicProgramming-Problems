@@ -108,7 +108,27 @@ If it is not possible to make the amount, return `-1`.
 Additionally, show **which coins** were used in the solution.
 
 ---
+## Day 7: Longest Increasing Subsequence (LIS)
 
+1. **Day7_LIS_Length.java** (O(n²) DP Approach)
+   - Problem: Given an array, find the length of the **longest increasing subsequence**.
+   - Approach:
+     - `dp[i]` = length of LIS ending at index `i`.
+     - Transition:  
+       ```
+       if (arr[i] > arr[j]) 
+           dp[i] = max(dp[i], dp[j] + 1)
+       ```
+   - Time Complexity: O(n²)  
+   - Space Complexity: O(n)  
+
+2. **Day7_LIS_Optimized.java** (O(n log n) Approach)
+   - Uses a **patience sorting technique** with binary search.
+   - Maintains a list `sub` that stores the smallest possible last elements of increasing subsequences of different lengths.
+   - Uses `Collections.binarySearch()` to find position to insert/replace.
+   - Time Complexity: O(n log n)  
+   - Space Complexity: O(n)  
+---
 ## Approach
 We solve this using **Dynamic Programming (DP)**:
 
